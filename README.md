@@ -2,6 +2,8 @@
 
 **Live demo → https://machine-room-coffee.vercel.app**
 
+The demo auto-deploys from this repository's `main` branch, so every merge into it is already live.
+
 A scroll driven landing page for a fictional specialty coffee roastery and espresso bar, built as a demo of animated, conversion minded web design.
 
 **One offer, one audience, one action:** reserve a table.
