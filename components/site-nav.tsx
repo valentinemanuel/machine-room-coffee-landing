@@ -117,7 +117,7 @@ export function SiteNav() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[55] flex flex-col justify-center bg-black/80 backdrop-blur-3xl md:hidden"
+            className="fixed inset-0 z-40 flex flex-col justify-center bg-black/80 backdrop-blur-3xl md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

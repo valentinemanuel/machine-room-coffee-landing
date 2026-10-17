@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { ArrowDown } from "@phosphor-icons/react";
 import { Reveal } from "@/components/reveal";
-import { HERO, HERO_STATS } from "@/lib/data";
+import { HERO, HERO_STATS, CAFETERIA } from "@/lib/data";
 
 function SteamWisp({ delay }: { delay: number }) {
   return (
@@ -40,7 +40,7 @@ export function Hero() {
             <Reveal>
               <p className="mb-6 flex items-center gap-3 text-sm font-medium text-muted">
                 <span aria-hidden className="h-px w-10 bg-ember" />
-                Roastery and espresso bar, since {HERO_STATS.at(0)!.value}
+                Roastery and espresso bar, since {CAFETERIA.since}
               </p>
             </Reveal>
 

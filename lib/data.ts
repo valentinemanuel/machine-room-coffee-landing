@@ -30,7 +30,7 @@ export const HERO = {
 export const TAGLINE = {
   lines: [
     "Every shot is dialed in twice",
-    "void before the cup leaves the bar",
+    "before the cup ever leaves the bar",
   ],
 };
 
@@ -69,7 +69,7 @@ export const SCENES = [
     index: "03",
     kicker: "The espresso bar",
     title: "Nineteen seconds of pressure",
-    body: "The 1974 lever pulls a nine bar shot by hand. We redial it twice void before the first cup of the morning goes out.",
+    body: "The 1974 lever pulls a nine bar shot by hand. We redial it twice before the first cup of the morning goes out.",
     image: {
       src: "/images/machine.jpg",
       alt: "Close view of the restored lever espresso machine working at the bar",
@@ -78,7 +78,7 @@ export const SCENES = [
   {
     id: "roastery",
     index: "04",
-    kicker: "The roastery, visible",
+    kicker: "The roastery behind the glass",
     title: "Roast day is Friday",
     body: "Eighteen kilos a week, roasted Thursday night and rested until Friday. The shelf changes as soon as a lot runs out.",
     image: {

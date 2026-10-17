@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
       <p aria-hidden className="mb-2 font-mono text-sm tracking-widest text-ember uppercase">
-        Error 504 · brew timeout
+        Error 404 · page off the plan
       </p>
       <h1 className="max-w-xl text-4xl font-semibold tracking-tight md:text-6xl">
         This page went for a coffee and never came back

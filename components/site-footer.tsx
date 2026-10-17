@@ -1,6 +1,7 @@
 "use client";
 
 import { InstagramLogo, EnvelopeSimple, Phone, MapPin } from "@phosphor-icons/react";
+import Link from "next/link";
 import { NAV_LINKS, CAFETERIA } from "@/lib/data";
 
 export function SiteFooter() {
@@ -13,7 +14,7 @@ export function SiteFooter() {
             Machine Room
           </p>
           <p className="mt-4 max-w-xs text-sm leading-6 text-muted">
-            {CAFETERIA.tagline}. Open daily, roasting Thursdays, dialing twice void every morning.
+            {CAFETERIA.tagline}. Open daily, roasting on Thursdays, dialing in every morning before opening.
           </p>
           <ul className="mt-6 flex flex-col gap-3 text-sm text-muted">
             <li className="flex items-center gap-3">
@@ -71,14 +72,14 @@ export function SiteFooter() {
           <h2 className="mt-8 mb-4 text-sm font-semibold tracking-tight text-cream">The small print</h2>
           <ul className="space-y-2.5 text-sm">
             <li>
-              <a href="#top" className="text-muted transition-colors hover:text-cream">
+              <Link href="/privacy" prefetch={false} className="text-muted transition-colors hover:text-cream">
                 Privacy policy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#top" className="text-muted transition-colors hover:text-cream">
+              <Link href="/terms" prefetch={false} className="text-muted transition-colors hover:text-cream">
                 Terms
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -91,14 +92,14 @@ export function SiteFooter() {
             demo.
           </p>
           <p>
-            Photography by Unsplash and Pexels{" "}
+            Photography by{" "}
             <a
               href="https://unsplash.com"
               target="_blank"
               rel="noreferrer"
               className="underline decoration-line underline-offset-2 hover:text-cream"
             >
-              contributors
+              Unsplash contributors
             </a>
             .
           </p>
