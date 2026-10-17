@@ -1,5 +1,7 @@
 # Machine Room Coffee
 
+**Live demo → https://machine-room-coffee.vercel.app**
+
 A scroll driven landing page for a fictional specialty coffee roastery and espresso bar, built as a demo of animated, conversion minded web design.
 
 **One offer, one audience, one action:** reserve a table.
