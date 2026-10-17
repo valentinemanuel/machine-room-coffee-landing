@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  /* Machine Room palette. Dark backgrounds come from the approved set. */
+  --color-background: #131209;
+  --color-surface: #181818;
+  --color-surface-2: #1f1f1f;
+  --color-surface-3: #272727;
+  --color-cream: #f5f1e8;
+  --color-muted: #9b9b9b;
+  --color-line: rgba(245, 241, 232, 0.12);
+  --color-ember: #c97b28;
+  --color-ember-strong: #e08b2d;
+
+  /* The fluid easing every transition on the site uses. */
+  --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-cream);
+  font-family: var(--font-sans), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--color-ember);
+  color: #131209;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ember-strong);
+  outline-offset: 2px;
+}
+
+/* Tagline reveal section: words activate one at a time as they cross the trigger line. */
+.tagline-word {
+  color: rgba(245, 241, 232, 0.3);
+  transition: color 0.8s var(--ease-fluid);
+}
+
+.tagline-word.word-active {
+  color: var(--color-cream);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tagline-word {
+    color: var(--color-cream);
+    transition: none;
+  }
+}
+
+/* Skip to content link for keyboard users. */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -64px;
+  z-index: 100;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  background: var(--color-cream);
+  color: #131209;
+  font-size: 14px;
+  font-weight: 600;
+  transition: top 0.3s var(--ease-fluid);
+}
+
+.skip-link:focus-visible {
+  top: 16px;
+}
