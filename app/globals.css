@@ -76,6 +76,33 @@ li {
   }
 }
 
+/* Animated steam wisps: pure CSS so they never touch the Motion runtime. */
+@keyframes steam-rise {
+  0% {
+    opacity: 0.15;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.55;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 0.15;
+    transform: translateY(0);
+  }
+}
+
+.steam-wisp path {
+  animation: steam-rise 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .steam-wisp path {
+    animation: none;
+    opacity: 0.4;
+  }
+}
+
 /* Skip to content link for keyboard users. */
 .skip-link {
   position: absolute;

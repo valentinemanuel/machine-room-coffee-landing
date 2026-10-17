@@ -59,9 +59,15 @@ function Scene({ scene, index, total, progress }: SceneProps) {
   const end = (index + 1) / total;
   const fade = 0.10;
 
+  // Keyframe inputs must stay inside [0, 1]. Motion generates
+  // times: [0, ...inputRange, 1], so a value outside that range
+  // makes its offsets non-monotonic and crashes WAAPI animation.
+  const fadeInStart = Math.max(0, start - fade / 2);
+  const fadeOutEnd = Math.min(1, end + fade / 2);
+
   const opacity = useTransform(
     progress,
-    [start - fade / 2, start + fade / 2, end - fade / 2, end + fade / 2],
+    [fadeInStart, start + fade / 2, end - fade / 2, fadeOutEnd],
     [0, 1, 1, 0],
     { clamp: true },
   );

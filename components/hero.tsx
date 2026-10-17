@@ -9,15 +9,16 @@ import { HERO, HERO_STATS } from "@/lib/data";
 
 function SteamWisp({ delay }: { delay: number }) {
   return (
-    <motion.path
-      d="M 0 24 C -6 18, 6 12, 0 4"
-      stroke="#f5f1e8"
-      strokeWidth={2.5}
-      strokeLinecap="round"
-      fill="none"
-      animate={{ opacity: [0.15, 0.55, 0.15], y: [0, -5, 0] }}
-      transition={{ duration: 3.2, delay, repeat: Infinity, ease: "easeInOut" }}
-    />
+    <svg width="14" height="26" viewBox="0 0 10 26" className="steam-wisp" aria-hidden>
+      <path
+        d="M 5 24 C -1 18, 11 12, 5 4"
+        stroke="#f5f1e8"
+        strokeWidth={2.5}
+        strokeLinecap="round"
+        fill="none"
+        style={{ animationDelay: `${delay}s` }}
+      />
+    </svg>
   );
 }
 
@@ -85,15 +86,9 @@ export function Hero() {
           <Reveal delay={0.2} className="relative">
             <div className="relative">
               <div className="absolute -top-7 left-10 z-10 flex gap-1" aria-hidden>
-                <svg width="14" height="26" viewBox="0 0 10 26" className="text-cream/70">
-                  <SteamWisp delay={0} />
-                </svg>
-                <svg width="14" height="26" viewBox="0 0 10 26" className="text-cream/70">
-                  <SteamWisp delay={0.7} />
-                </svg>
-                <svg width="14" height="26" viewBox="0 0 10 26" className="text-cream/70">
-                  <SteamWisp delay={1.4} />
-                </svg>
+                <SteamWisp delay={0} />
+                <SteamWisp delay={0.7} />
+                <SteamWisp delay={1.4} />
               </div>
 
               <motion.div
